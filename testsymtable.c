@@ -435,6 +435,7 @@ static void testMap(void)
 
 static void testEmptyTable(void)
 {
+   
    SymTable_T oSymTable;
    char *pcValue;
    int iFound;
@@ -463,6 +464,7 @@ static void testEmptyTable(void)
    SymTable_map(oSymTable, printBinding, "%s\t%s\n");
 
    SymTable_free(oSymTable);
+   
 }
 
 /*--------------------------------------------------------------------*/

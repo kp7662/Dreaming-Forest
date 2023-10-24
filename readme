@@ -2,8 +2,7 @@ Assignment 3 readme File
 
 ------------------------------------------------------------------------
 What is your name?
-
-
+Kok Wei Pua
 
 ------------------------------------------------------------------------
 What authorized sources of information did you use to complete the
@@ -12,7 +11,26 @@ in the "Policies" web page (also available on armlab in the file
 ~cos217/AuthorizedSourcesList ) to this section of the readme file,
 and edit it as appropriate.
 
+The course's lectures.
+Lecture 7: Building Multifile Programs with make
+Lecture 8: Structures, Command Line Arguments, Dynamic Memory
+Lecture 10: Data Structures
 
+The course's precepts.
+Precept 13 (stack.h, stack.c, teststack.c)
+Precept 9 (The Meminfo Tool, The Valgrind Tool)
+
+The course's website.
+Assignment 3: A Symbol Table ADT (https://www.cs.princeton.edu/courses/archive/spr23/cos217/asgts/03symtable/index.html)
+
+Documents that are referenced directly by the course's website. Such documents include the course's lecture slides and precept handouts.
+SymTable Hash Table Implementation Memory Diagram (chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://www.cs.princeton.edu/courses/archive/spr23/cos217/precepts/w06p1/symtablehashcolorized.pdf)
+
+SymTable Hash Table Implementation After Expansion Memory Diagram (chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://www.cs.princeton.edu/courses/archive/spr23/cos217/precepts/w06p1/symtablehashexpansion.pdf)
+
+The course's current staff members outside of class time through Ed.
+
+Current Intro Lab TAs through visits to the Intro COS Lab.
 
 ------------------------------------------------------------------------
 What unauthorized sources of information did you use to complete the
@@ -26,19 +44,22 @@ interaction, may additionally require the interaction being reported
 to the Committee on Discipline. Write "None" if you used no
 unauthorized sources of information.
 
-
+None.
 
 ------------------------------------------------------------------------
 What is your assessment of the assignment? Was it helpful? Was it fun?
 
-
+I think this is by far the most fun assignment. It is very helpful to 
+learn about pointers, linked-list & hash map implementations of symbol
+table, and practice using makefile, valgrind, and meminfo. The instructions
+are very clear.
 
 ------------------------------------------------------------------------
 (optional) What information can you provide about your submission that
 will help your grader to grade it in the most favorable light? In
 particular, what bugs are in your submission?
 
-
+None.
 
 ------------------------------------------------------------------------
 What warnings does splint generate on symtablelist.c, and what are your
@@ -46,7 +67,7 @@ disagreements with them? Copy the splint warnings here, and express your
 disagreement after each warning. If there are no warnings, then write
 "None."
 
-
+None.
 
 ------------------------------------------------------------------------
 What warnings does critTer generate on symtablelist.c, and what are your
@@ -54,7 +75,20 @@ disagreements with them? Copy the critTer warnings here, and express
 your disagreement after each warning. If there are no warnings, then
 write "None."
 
+Checking symtablelist.c
 
+   symtablelist.c: line 92: medium priority:
+   Do you want to validate 'pvValue' through an assert?
+
+   symtablelist.c: line 139: medium priority:
+   Do you want to validate 'pvValue' through an assert?
+
+   symtablelist.c: line 249: medium priority:
+   Do you want to validate 'pvExtra' through an assert?
+
+Explanation: I disagree with the warnings because 'pvValue' and 'pvExtra'
+can accept a pointer to any datatype, including NULL. So, the program 
+need not to validate 'pvValue' and 'pvExtra' through an assert. 
 
 ------------------------------------------------------------------------
 What warnings does splint generate on symtablehash.c, and what are your
@@ -62,7 +96,7 @@ disagreements with them? Copy the splint warnings here, and express your
 disagreement after each warning. If there are no warnings, then write
 "None."
 
-
+None.
 
 ------------------------------------------------------------------------
 What warnings does critTer generate on symtablehash.c, and what are your
@@ -70,7 +104,20 @@ disagreements with them? Copy the critTer warnings here, and express
 your disagreement after each warning. If there are no warnings, then
 write "None."
 
+Checking symtablehash.c
 
+   symtablehash.c: line 197: medium priority:
+   Do you want to validate 'pvValue' through an assert?
+
+   symtablehash.c: line 254: medium priority:
+   Do you want to validate 'pvValue' through an assert?
+
+   symtablehash.c: line 381: medium priority:
+   Do you want to validate 'pvExtra' through an assert?
+
+Explanation: I disagree with the warnings because 'pvValue' and 'pvExtra'
+can accept a pointer to any datatype, including NULL. So, the program 
+need not to validate 'pvValue' and 'pvExtra' through an assert. 
 
 ------------------------------------------------------------------------
 What are the CPU times reported by testsymtable.c with binding counts
@@ -79,22 +126,22 @@ implementation, (2) your non-expanding hash table implementation, and
 (3) your expanding hash table implementation? Fill in the blanks.
 
 The linked list implementation with:
--- 50 bindings consumed ________ seconds.
--- 500 bindings consumed ________ seconds.
--- 5000 bindings consumed ________ seconds.
--- 50000 bindings consumed ________ seconds.
--- 500000 bindings consumed ________ seconds.
+-- 50 bindings consumed 0.003211 seconds.
+-- 500 bindings consumed 0.046167 seconds.
+-- 5000 bindings consumed 1.876840 seconds.
+-- 50000 bindings consumed 147.056165 seconds.
+-- 500000 bindings consumed more than 5 minutes.
 
 The non-expanding hash table implementation with:
--- 50 bindings consumed ________ seconds.
--- 500 bindings consumed ________ seconds.
--- 5000 bindings consumed ________ seconds.
--- 50000 bindings consumed ________ seconds.
--- 500000 bindings consumed ________ seconds.
+-- 50 bindings consumed 0.003451 seconds.
+-- 500 bindings consumed 0.032219 seconds.
+-- 5000 bindings consumed 0.323099 seconds.
+-- 50000 bindings consumed 3.068406 seconds.
+-- 500000 bindings consumed 147.580036 seconds.
 
 The expanding hash table implementation with:
--- 50 bindings consumed ________ seconds.
--- 500 bindings consumed ________ seconds.
--- 5000 bindings consumed ________ seconds.
--- 50000 bindings consumed ________ seconds.
--- 500000 bindings consumed ________ seconds.
+-- 50 bindings consumed 0.000000 seconds.
+-- 500 bindings consumed 0.000000 seconds.
+-- 5000 bindings consumed 0.009744 seconds.
+-- 50000 bindings consumed 0.129753 seconds.
+-- 500000 bindings consumed 1.773162 seconds.
